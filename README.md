@@ -1,2 +1,2 @@
 # ContactsApp
-Contact App with retrofit, Room, Dagger hilt and used MVVM clean code pattern
+Contact App that uses retrofit for API calling, Room for local database, Dagger hilt for dependency incjection and used MVVM clean code pattern
