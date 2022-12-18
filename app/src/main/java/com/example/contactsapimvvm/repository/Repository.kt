@@ -37,12 +37,11 @@ class Repository @Inject constructor(
                     response.body()?.data?.forEach {
                         insetContacts(it)
                     }
-                    //  contactListData.postValue(response.body())
                 }
             }
 
             override fun onFailure(call: Call<ContactListData>, t: Throwable) {
-                //contactListData.postValue(null)
+                //
             }
         })
     }

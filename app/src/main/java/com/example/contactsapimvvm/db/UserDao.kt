@@ -19,5 +19,4 @@ interface UserDao {
     @Query(value = "DELETE FROM contacts")
     fun deleteAllContacts()
 
-
 }

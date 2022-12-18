@@ -53,7 +53,6 @@ class ContactListRVAdapter(private val dataSet: List<Data>) :
             val fn = data.first_name
             val ln = data.last_name
             name.text = fn.plus(" $ln")
-
         }
     }
 }

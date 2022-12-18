@@ -13,15 +13,10 @@ import javax.inject.Inject
 @HiltViewModel
 class MyViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
 
-    var contactListData: MutableLiveData<ContactListData> = MutableLiveData()
-
+    private var contactListData: MutableLiveData<ContactListData> = MutableLiveData()
 
     fun getContactData(): LiveData<List<Data>> {
         return repository.getAllContacts()
-    }
-
-    fun getContactListDataObserver(): MutableLiveData<ContactListData> {
-        return contactListData
     }
 
     fun loadContactListData() {

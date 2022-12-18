@@ -20,7 +20,6 @@ object AppModule {
 
     val BASE_URL = "https://reqres.in/"
 
-
     @Singleton
     @Provides
     fun getRetrofitInstance(retrofit: Retrofit): ApiServiceInstance {
