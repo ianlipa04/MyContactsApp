@@ -42,9 +42,9 @@ class ContactDetailsFragment : Fragment() {
                 it[position].apply {
                     val fn = it[position].first_name
                     val ln = it[position].last_name
-                    val nameLabel = "Name: "
+                    val nameLabel = "Name:"
                     val name = fn.plus(" $ln")
-                    val emailLabel = "Email: "
+                    val emailLabel = "Email:"
                     val email = it[position].email
                     iv_profile.load(it[position].avatar)
                     tv_name.text = nameLabel.plus(" $name")
