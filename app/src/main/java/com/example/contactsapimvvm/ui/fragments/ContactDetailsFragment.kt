@@ -42,9 +42,13 @@ class ContactDetailsFragment : Fragment() {
                 it[position].apply {
                     val fn = it[position].first_name
                     val ln = it[position].last_name
+                    val nameLabel = "Name: "
+                    val name = fn.plus(" $ln")
+                    val emailLabel = "Email: "
+                    val email = it[position].email
                     iv_profile.load(it[position].avatar)
-                    tv_name.text = fn.plus(" $ln")
-                    tv_email.text = it[position].email
+                    tv_name.text = nameLabel.plus(" $name")
+                    tv_email.text = emailLabel.plus(" $email")
                 }
             } else {
                 Toast.makeText(activity, "Failed to load User Data", Toast.LENGTH_SHORT).show()
