@@ -4,12 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="90dp"
+    android:background="@mipmap/img_bg"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/iv_splash"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="310dp"
+        android:layout_height="310dp"
         android:layout_margin="20dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="70dp"
@@ -17,7 +18,6 @@
         android:scaleType="fitXY"
         android:src="@mipmap/img_contact_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,9 +26,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Contacts"
-        android:textSize="80sp"
+        android:text="MyContacts"
+        android:textSize="65sp"
         android:textStyle="bold"
+        android:textColor="@android:color/tertiary_text_light"
+        android:lines="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setRvRoomRvData()
+        supportActionBar?.hide()
     }
 
     override fun onBackPressed() {
