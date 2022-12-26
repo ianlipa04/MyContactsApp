@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.item_contact_list.view.*
 class ContactListRVAdapter(private val dataSet: List<Data>) :
     RecyclerView.Adapter<ContactListRVAdapter.VviewHolder>() {
     private val fragmentDetails = ContactDetailsFragment()
-    private var mList: List<Data>? = null
+    private var mList: List<Data>? = dataSet
 
     fun setListData(list: List<Data>) {
         this.mList = list
@@ -43,7 +43,7 @@ class ContactListRVAdapter(private val dataSet: List<Data>) :
     }
 
     override fun getItemCount(): Int {
-        return dataSet.size
+        return mList!!.size
     }
 
     class VviewHolder(view: View) : RecyclerView.ViewHolder(view) {
