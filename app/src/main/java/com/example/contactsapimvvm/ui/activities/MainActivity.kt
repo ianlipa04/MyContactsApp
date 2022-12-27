@@ -1,6 +1,5 @@
 package com.example.contactsapimvvm.ui.activities
 
-import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -10,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.contactsapimvvm.R
 import com.example.contactsapimvvm.ui.adapters.ContactListRVAdapter
-import com.example.contactsapimvvm.ui.fragments.ContactDetailsFragment
 import com.example.contactsapimvvm.viewmodel.MyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
@@ -29,12 +27,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val vf =  supportFragmentManager.findFragmentById(R.id.cl_container)
-        if (vf!= null){
+        val vf = supportFragmentManager.findFragmentById(R.id.cl_container)
+        if (vf != null) {
             supportFragmentManager.popBackStack()
-        }else{
+        } else {
             count++
-            if(count<2) {
+            if (count < 2) {
                 Toast.makeText(this, "Press again to exit...", Toast.LENGTH_SHORT).show()
                 Handler(Looper.getMainLooper()).postDelayed({
                     count = 0

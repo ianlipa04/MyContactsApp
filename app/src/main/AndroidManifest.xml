@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ContactsApiMVVM"
         tools:targetApi="31">
-        <activity android:name=".ui.activities.SplashScreen"
+        <activity
+            android:name=".ui.activities.SplashScreen"
             android:exported="true">
 
             <intent-filter>
