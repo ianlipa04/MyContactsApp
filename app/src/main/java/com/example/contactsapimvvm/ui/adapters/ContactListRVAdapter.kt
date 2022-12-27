@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.example.contactsapimvvm.R
 import com.example.contactsapimvvm.entities.Data
 import com.example.contactsapimvvm.ui.fragments.ContactDetailsFragment
@@ -48,11 +49,13 @@ class ContactListRVAdapter(private val dataSet: List<Data>) :
 
     class VviewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val name = view.name
+        val img = view.image
 
         fun bind(data: Data) {
             val fn = data.first_name
             val ln = data.last_name
             name.text = fn.plus(" $ln")
+            img.load(data.avatar)
         }
     }
 }
